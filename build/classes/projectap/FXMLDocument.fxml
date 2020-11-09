@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="750.0" prefWidth="1200.0" style="-fx-background-color: #fff;" stylesheets="@../Design/ButtonStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectap.FXMLDocumentController">
+   <children>
+      <Pane layoutX="10.0" layoutY="10.0" prefHeight="110.0" prefWidth="1200.0" style="-fx-background-color: #2D75E8;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="85.0" fitWidth="98.0" layoutX="41.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/mobile-icon.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="TexMobile" fill="WHITE" fontSmoothingType="LCD" layoutX="161.0" layoutY="69.0" strokeType="INSIDE" strokeWidth="0.0" text="Spectrum Mobile Store" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="35.0" />
+               </font>
+            </Text>
+            <Button fx:id="BtCart" contentDisplay="CENTER" layoutX="1096.0" layoutY="28.0" mnemonicParsing="false" onAction="#toCart" prefHeight="32.0" prefWidth="41.0" stylesheets="@../Design/CusCartBtn.css">
+               <graphic>
+                  <ImageView fitHeight="45.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/CusCart.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="backBtn" contentDisplay="CENTER" layoutX="1020.0" layoutY="28.0" mnemonicParsing="false" onAction="#backToMain" prefHeight="32.0" prefWidth="41.0" stylesheets="@../Design/CusCartBtn.css">
+               <graphic>
+                  <ImageView fitHeight="45.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/sside.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="111.0" layoutY="123.0" prefHeight="90.0" prefWidth="1000.0" style="-fx-border-color: #2D75E8; -fx-border-width: 1px; -fx-border-radius: 5;" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="123.0">
+         <children>
+            <Label layoutX="22.0" layoutY="19.0" text="News &amp; Ads Space">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Button layoutX="100.0" layoutY="227.0" mnemonicParsing="false" text="Search">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/searchIcon.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <TextField fx:id="TfSearh" layoutX="185.0" layoutY="227.0" prefHeight="31.0" prefWidth="304.0" />
+      <ScrollPane layoutX="100.0" layoutY="275.0" prefHeight="375.0" prefWidth="781.0" style="-fx-background-color: #fff; -fx-border-color: #2D75E8; -fx-border-radius: 5;" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="319.0" AnchorPane.topAnchor="275.0">
+         <content>
+            <GridPane hgap="5.0" prefHeight="853.0" prefWidth="763.0" vgap="5.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Pane fx:id="pane0" style="-fx-border-color: #2D75E8; -fx-border-radius: 5; -fx-background-color: #fff;">
+                     <children>
+                        <ImageView fx:id="Pimg0" fitHeight="70.0" fitWidth="91.0" layoutX="55.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/AppIcon.png" />
+                           </image>
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                        </ImageView>
+                        <Label fx:id="Pname0" layoutX="37.0" layoutY="84.0" text="Name of the Device">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="Pdesc0" alignment="CENTER" layoutX="10.0" layoutY="104.0" prefHeight="104.0" prefWidth="164.0" style="-fx-border-color: #2D75E8; -fx-border-radius: 5;" text="Description" wrapText="true" />
+                        <Label fx:id="Pprice0" alignment="CENTER" layoutX="62.0" layoutY="216.0" prefHeight="17.0" prefWidth="63.0" text="00.00 SAR">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btn_addEToCart" layoutX="36.0" layoutY="240.0" mnemonicParsing="false" onAction="#addToCart" prefHeight="31.0" prefWidth="114.0" text="Add to Cart">
+                           <graphic>
+                              <ImageView fitHeight="23.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/ATcart.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pane01" style="-fx-border-color: #2D75E8; -fx-border-radius: 5; -fx-background-color: #fff;" GridPane.columnIndex="1">
+                     <children>
+                        <ImageView fx:id="Pimg01" fitHeight="70.0" fitWidth="91.0" layoutX="55.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/AppIcon.png" />
+                           </image>
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                        </ImageView>
+                        <Label fx:id="Pname01" layoutX="37.0" layoutY="84.0" text="Name of the Device">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="Pdesc01" alignment="CENTER" layoutX="10.0" layoutY="104.0" prefHeight="104.0" prefWidth="164.0" style="-fx-border-color: #2D75E8; -fx-border-radius: 5;" text="Description" wrapText="true" />
+                        <Label fx:id="Pprice01" alignment="CENTER" layoutX="62.0" layoutY="216.0" prefHeight="17.0" prefWidth="63.0" text="00.00 SAR">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btn_addEToCart" layoutX="36.0" layoutY="240.0" mnemonicParsing="false" onAction="#addToCart" prefHeight="31.0" prefWidth="114.0" text="Add to Cart">
+                           <graphic>
+                              <ImageView fitHeight="23.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/ATcart.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pane02" style="-fx-border-color: #2D75E8; -fx-border-radius: 5; -fx-background-color: #fff;" GridPane.columnIndex="2">
+                     <children>
+                        <ImageView fx:id="Pimg02" fitHeight="70.0" fitWidth="91.0" layoutX="55.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/AppIcon.png" />
+                           </image>
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                        </ImageView>
+                        <Label fx:id="Pname02" layoutX="37.0" layoutY="84.0" text="Name of the Device">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="Pdesc02" alignment="CENTER" layoutX="10.0" layoutY="104.0" prefHeight="104.0" prefWidth="164.0" style="-fx-border-color: #2D75E8; -fx-border-radius: 5;" text="Description" wrapText="true" />
+                        <Label fx:id="Pprice02" alignment="CENTER" layoutX="62.0" layoutY="216.0" prefHeight="17.0" prefWidth="63.0" text="00.00 SAR">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btn_addEToCart" layoutX="36.0" layoutY="240.0" mnemonicParsing="false" onAction="#addToCart" prefHeight="31.0" prefWidth="114.0" text="Add to Cart">
+                           <graphic>
+                              <ImageView fitHeight="23.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/ATcart.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pane03" style="-fx-border-color: #2D75E8; -fx-border-radius: 5; -fx-background-color: #fff;" GridPane.columnIndex="3">
+                     <children>
+                        <ImageView fx:id="Pimg03" fitHeight="70.0" fitWidth="91.0" layoutX="55.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/AppIcon.png" />
+                           </image>
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                        </ImageView>
+                        <Label fx:id="Pname03" layoutX="37.0" layoutY="84.0" text="Name of the Device">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="Pdesc03" alignment="CENTER" layoutX="10.0" layoutY="104.0" prefHeight="104.0" prefWidth="164.0" style="-fx-border-color: #2D75E8; -fx-border-radius: 5;" text="Description" wrapText="true" />
+                        <Label fx:id="Pprice03" alignment="CENTER" layoutX="62.0" layoutY="216.0" prefHeight="17.0" prefWidth="63.0" text="00.00 SAR">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btn_addEToCart" layoutX="36.0" layoutY="240.0" mnemonicParsing="false" onAction="#addToCart" prefHeight="31.0" prefWidth="114.0" text="Add to Cart">
+                           <graphic>
+                              <ImageView fitHeight="23.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/ATcart.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pane04" style="-fx-border-color: #2D75E8; -fx-border-radius: 5; -fx-background-color: #fff;" GridPane.rowIndex="1">
+                     <children>
+                        <ImageView fx:id="Pimg04" fitHeight="70.0" fitWidth="91.0" layoutX="55.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/AppIcon.png" />
+                           </image>
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                        </ImageView>
+                        <Label fx:id="Pname04" layoutX="37.0" layoutY="84.0" text="Name of the Device">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="Pdesc04" alignment="CENTER" layoutX="10.0" layoutY="104.0" prefHeight="104.0" prefWidth="164.0" style="-fx-border-color: #2D75E8; -fx-border-radius: 5;" text="Description" wrapText="true" />
+                        <Label fx:id="Pprice04" alignment="CENTER" layoutX="62.0" layoutY="216.0" prefHeight="17.0" prefWidth="63.0" text="00.00 SAR">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btn_addEToCart" layoutX="36.0" layoutY="240.0" mnemonicParsing="false" onAction="#addToCart" prefHeight="31.0" prefWidth="114.0" text="Add to Cart">
+                           <graphic>
+                              <ImageView fitHeight="23.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/ATcart.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pane05" style="-fx-border-color: #2D75E8; -fx-border-radius: 5; -fx-background-color: #fff;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <ImageView fx:id="Pimg05" fitHeight="70.0" fitWidth="91.0" layoutX="55.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/AppIcon.png" />
+                           </image>
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                        </ImageView>
+                        <Label fx:id="Pname05" layoutX="37.0" layoutY="84.0" text="Name of the Device">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="Pdesc05" alignment="CENTER" layoutX="10.0" layoutY="104.0" prefHeight="104.0" prefWidth="164.0" style="-fx-border-color: #2D75E8; -fx-border-radius: 5;" text="Description" wrapText="true" />
+                        <Label fx:id="Pprice05" alignment="CENTER" layoutX="62.0" layoutY="216.0" prefHeight="17.0" prefWidth="63.0" text="00.00 SAR">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btn_addEToCart" layoutX="36.0" layoutY="240.0" mnemonicParsing="false" onAction="#addToCart" prefHeight="31.0" prefWidth="114.0" text="Add to Cart">
+                           <graphic>
+                              <ImageView fitHeight="23.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/ATcart.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pane06" style="-fx-border-color: #2D75E8; -fx-border-radius: 5; -fx-background-color: #fff;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <children>
+                        <ImageView fx:id="Pimg06" fitHeight="70.0" fitWidth="91.0" layoutX="55.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/AppIcon.png" />
+                           </image>
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                        </ImageView>
+                        <Label fx:id="Pname06" layoutX="37.0" layoutY="84.0" text="Name of the Device">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="Pdesc06" alignment="CENTER" layoutX="10.0" layoutY="104.0" prefHeight="104.0" prefWidth="164.0" style="-fx-border-color: #2D75E8; -fx-border-radius: 5;" text="Description" wrapText="true" />
+                        <Label fx:id="Pprice06" alignment="CENTER" layoutX="62.0" layoutY="216.0" prefHeight="17.0" prefWidth="63.0" text="00.00 SAR">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btn_addEToCart" layoutX="36.0" layoutY="240.0" mnemonicParsing="false" onAction="#addToCart" prefHeight="31.0" prefWidth="114.0" text="Add to Cart">
+                           <graphic>
+                              <ImageView fitHeight="23.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/ATcart.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </Pane>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </GridPane>
+         </content>
+      </ScrollPane>
+      <Pane layoutX="20.0" layoutY="20.0" prefHeight="79.0" prefWidth="1200.0" style="-fx-background-color: #2D75E8;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Pane layoutX="921.0" layoutY="275.0" prefHeight="375.0" prefWidth="179.0" style="-fx-background-color: #2D75E8;" AnchorPane.bottomAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="275.0">
+         <children>
+            <Button fx:id="btn_PhMo" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#PhoneOrMobile" prefHeight="25.0" prefWidth="149.0" text="Phones / Mobile" />
+            <Button fx:id="btn_samsung" layoutX="31.0" layoutY="79.0" mnemonicParsing="false" onAction="#Samsung" prefHeight="25.0" prefWidth="115.0" text="Samsung" />
+            <Button fx:id="btn_Tab" layoutX="14.0" layoutY="47.0" mnemonicParsing="false" onAction="#TabletOrTab" prefHeight="25.0" prefWidth="149.0" text="Tablet / Tap" />
+            <Button fx:id="btn_google" layoutX="32.0" layoutY="110.0" mnemonicParsing="false" onAction="#Google" prefHeight="25.0" prefWidth="115.0" text="Google" />
+            <Button fx:id="btn_apple" layoutX="32.0" layoutY="142.0" mnemonicParsing="false" onAction="#Apple" prefHeight="25.0" prefWidth="115.0" text="Apple" />
+            <Button fx:id="btn_Hwa" layoutX="31.0" layoutY="174.0" mnemonicParsing="false" onAction="#Huawi" prefHeight="25.0" prefWidth="115.0" text="Huawi" />
+            <Button fx:id="btn_nokkia" layoutX="32.0" layoutY="207.0" mnemonicParsing="false" onAction="#Nokkia" prefHeight="25.0" prefWidth="115.0" text="Nokkia" />
+            <Button fx:id="btn_lg" layoutX="31.0" layoutY="240.0" mnemonicParsing="false" onAction="#LG" prefHeight="25.0" prefWidth="115.0" text="LG" />
+            <Button fx:id="btn_asus" layoutX="31.0" layoutY="272.0" mnemonicParsing="false" onAction="#Asus" prefHeight="25.0" prefWidth="115.0" text="Asus" />
+            <Button fx:id="btn_lenovo" layoutX="32.0" layoutY="305.0" mnemonicParsing="false" onAction="#Lenovo" prefHeight="25.0" prefWidth="115.0" text="Lenovo" />
+            <Button fx:id="btn_honor" layoutX="32.0" layoutY="336.0" mnemonicParsing="false" onAction="#Honor" prefHeight="25.0" prefWidth="115.0" text="Honor" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="780.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectap.CartController">
+   <children>
+      <Pane layoutX="20.0" layoutY="20.0" prefHeight="110.0" prefWidth="1200.0" style="-fx-background-color: #2D75E8;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="85.0" fitWidth="98.0" layoutX="41.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/mobile-icon.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="TexMobile" fill="WHITE" fontSmoothingType="LCD" layoutX="161.0" layoutY="69.0" strokeType="INSIDE" strokeWidth="0.0" text="Spectrum Mobile Store" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="35.0" />
+               </font>
+            </Text>
+            <Button fx:id="BtBack" contentDisplay="CENTER" layoutX="699.0" layoutY="29.0" mnemonicParsing="false" onAction="#backToMain" prefHeight="32.0" prefWidth="41.0" stylesheets="@../Design/CusCartBtn.css">
+               <graphic>
+                  <ImageView fitHeight="45.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/sside.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <Text fx:id="TexCart" layoutX="26.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My Cart" textAlignment="CENTER" wrappingWidth="117.44095802307129">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Text>
+      <ListView fx:id="LiVItem" layoutX="52.0" layoutY="183.0" prefHeight="317.0" prefWidth="491.0" style="-fx-border-color: #2D75E8; -fx-border-radius: 10;" AnchorPane.bottomAnchor="102.0" AnchorPane.leftAnchor="52.0" AnchorPane.rightAnchor="372.0" AnchorPane.topAnchor="183.0" />
+      <Text fx:id="OrderNm" layoutX="460.0" layoutY="453.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order No. :" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <Button fx:id="BtPay" layoutX="549.0" layoutY="475.0" mnemonicParsing="false" onAction="#toPay" prefHeight="25.0" prefWidth="170.0" stylesheets="@../Design/ButtonStyle.css" text="Pay" />
+      <ImageView fx:id="Imj" fitHeight="127.0" fitWidth="144.0" layoutX="573.0" layoutY="198.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/ANIimg.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="Img" layoutX="461.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Image :" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text fx:id="Price" layoutX="461.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price :" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text fx:id="Total" layoutX="460.0" layoutY="407.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total :" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <Label fx:id="LbOrderNm" layoutX="93.0" layoutY="253.0" prefHeight="17.0" prefWidth="116.0" />
+      <Pane layoutX="30.0" layoutY="30.0" prefHeight="79.0" prefWidth="1200.0" style="-fx-background-color: #2D75E8;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Label alignment="CENTER" layoutX="549.0" layoutY="431.0" prefHeight="33.0" prefWidth="170.0" style="-fx-border-color: #2D75E8; -fx-border-radius: 10;" />
+      <Label fx:id="LbTotal" alignment="CENTER" layoutX="549.0" layoutY="385.0" prefHeight="33.0" prefWidth="170.0" style="-fx-border-color: #2D75E8; -fx-border-radius: 10;" text="00.00 SR">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="LbPrice" alignment="CENTER" layoutX="549.0" layoutY="338.0" prefHeight="33.0" prefWidth="170.0" style="-fx-border-color: #2D75E8; -fx-border-radius: 10;" text="00.00 SR">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="540.0" prefWidth="780.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectap.PayController">
+   <children>
+      <Pane layoutX="30.0" layoutY="30.0" prefHeight="110.0" prefWidth="1200.0" style="-fx-background-color: #2D75E8;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="85.0" fitWidth="98.0" layoutX="41.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/mobile-icon.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="TexMobile" fill="WHITE" fontSmoothingType="LCD" layoutX="161.0" layoutY="69.0" strokeType="INSIDE" strokeWidth="0.0" text="Spectrum Mobile Store" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="35.0" />
+               </font>
+            </Text>
+            <Button fx:id="BtBack" contentDisplay="CENTER" layoutX="699.0" layoutY="29.0" mnemonicParsing="false" onAction="#backToMain" prefHeight="32.0" prefWidth="41.0" stylesheets="@../Design/CusCartBtn.css">
+               <graphic>
+                  <ImageView fitHeight="45.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/sside.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <Text fx:id="Pay" layoutX="36.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment Method" textAlignment="CENTER" wrappingWidth="261.29957580566406">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Text>
+      <Label layoutX="116.0" layoutY="171.0" text="Please Select Payment Method You want :" />
+      <RadioButton fx:id="RnCash" layoutX="180.0" layoutY="200.0" mnemonicParsing="false" text="Cash in the Store">
+         <toggleGroup>
+            <ToggleGroup fx:id="pays" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="RnMaster" layoutX="332.0" layoutY="200.0" mnemonicParsing="false" onAction="#CreditCard" text="Credit Card" toggleGroup="$pays" />
+      <RadioButton fx:id="RnPay" layoutX="469.0" layoutY="200.0" mnemonicParsing="false" onAction="#PayPal" text="PayPal" toggleGroup="$pays" />
+      <Label layoutX="116.0" layoutY="290.0" prefHeight="21.0" prefWidth="86.0" text="Card No. :" textAlignment="CENTER">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <TextField alignment="CENTER" layoutX="212.0" layoutY="288.0" prefHeight="25.0" prefWidth="197.0" />
+      <Label layoutX="432.0" layoutY="290.0" prefHeight="21.0" prefWidth="81.0" text="Date :" textAlignment="CENTER">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label layoutX="116.0" layoutY="329.0" prefHeight="21.0" prefWidth="112.0" text="Card Holder :" textAlignment="CENTER">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <TextField alignment="CENTER" layoutX="212.0" layoutY="327.0" prefHeight="25.0" prefWidth="197.0">
+         <font>
+            <Font name="Bernard MT Condensed" size="12.0" />
+         </font></TextField>
+      <Label layoutX="432.0" layoutY="329.0" prefHeight="21.0" prefWidth="46.0" text="CCV :" textAlignment="CENTER">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="116.0" layoutY="255.0" text="If you select Credit Card as Payment Method, Please Fill this feild :" />
+      <Pane layoutX="40.0" layoutY="40.0" prefHeight="79.0" prefWidth="1200.0" style="-fx-background-color: #2D75E8;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Label layoutX="116.0" layoutY="255.0" text="If you select Credit Card as Payment Method," textFill="RED" />
+      <Button fx:id="BtCancel" layoutX="574.0" layoutY="125.0" mnemonicParsing="false" onAction="#ToCart" prefHeight="25.0" prefWidth="81.0" stylesheets="@../Design/ButtonStyle.css" text="Cancel">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="BtConfirm" layoutX="677.0" layoutY="125.0" mnemonicParsing="false" onAction="#Confirm" prefHeight="25.0" prefWidth="81.0" stylesheets="@../Design/ButtonStyle.css" text="Confirm">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <DatePicker layoutX="487.0" layoutY="288.0" prefHeight="25.0" prefWidth="174.0" />
+      <TextField alignment="CENTER" layoutX="487.0" layoutY="327.0" prefHeight="25.0" prefWidth="103.0">
+         <font>
+            <Font name="Bernard MT Condensed" size="12.0" />
+         </font>
+      </TextField>
+      <Label layoutX="116.0" layoutY="365.0" text="If you select PayPal as Payment Method, Please Transfer the amount to Our PayPal Account :" />
+      <Label layoutX="116.0" layoutY="365.0" text="If you select PayPal as Payment Method," textFill="RED" />
+      <Label layoutX="116.0" layoutY="379.0" text="With Conceder the Order Number." textFill="RED" />
+      <Label layoutX="116.0" layoutY="412.0" prefHeight="21.0" prefWidth="143.0" text="Our PayPal Account :" textAlignment="CENTER">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="ourPaypal" alignment="CENTER" layoutX="262.0" layoutY="410.0" prefHeight="27.0" prefWidth="215.0" text="SpectrumMobile@Shop.com">
+         <font>
+            <Font name="Candara Bold" size="13.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>
