@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectap.OrdersController">
+   <children>
+      <Pane layoutX="20.0" layoutY="20.0" prefHeight="191.0" prefWidth="935.0" style="-fx-background-color: #2D75E8;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="230.0" layoutY="60.0" text=" Mobile Shop System" textFill="WHITE">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+            <Label layoutX="268.0" layoutY="131.0" text="Orders" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="70.0" fitWidth="64.0" layoutX="163.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/mobileIcon.png" />
+               </image>
+            </ImageView>
+            <Hyperlink fx:id="btn_sHome" layoutX="14.0" layoutY="141.0" onAction="#sHome" style="-fx-underline: none; -fx-border-color: white; -fx-border-radius: 25;" text="Home" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Hyperlink>
+         </children>
+      </Pane>
+      <Pane layoutX="140.0" layoutY="370.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #fff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="190.0">
+         <children>
+            <TableView fx:id="table_Order" layoutX="17.0" layoutY="15.0" prefHeight="480.0" prefWidth="761.0">
+              <columns>
+                <TableColumn prefWidth="100.0" text="State" />
+                <TableColumn minWidth="20.0" prefWidth="220.0" text="Order ID" />
+                  <TableColumn prefWidth="220.0" text="Iteams" />
+                  <TableColumn prefWidth="220.0" text="Payment Method" />
+              </columns>
+            </TableView>
+            <Button fx:id="btn_CreateO" layoutX="802.0" layoutY="12.0" mnemonicParsing="false" onAction="#OCreateOrder" prefHeight="90.0" prefWidth="177.0" style="-fx-border-color: #2D75E8; -fx-border-radius: 15; -fx-border-width: 2px;" stylesheets="@../Design/style.css" text="Create Order">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_UProcess" layoutX="802.0" layoutY="110.0" mnemonicParsing="false" onAction="#OUnderProcess" prefHeight="90.0" prefWidth="177.0" style="-fx-border-color: #2D75E8; -fx-border-radius: 15; -fx-border-width: 2px;" stylesheets="@../Design/style.css" text="Under Process" textFill="#00c8ff">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_Wait" layoutX="802.0" layoutY="210.0" mnemonicParsing="false" onAction="#OWait_Hold" prefHeight="90.0" prefWidth="177.0" style="-fx-border-color: #2D75E8; -fx-border-radius: 15; -fx-border-width: 2px;" stylesheets="@../Design/style.css" text="Wait / Hold" textFill="#ffa100">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_Cancel" layoutX="802.0" layoutY="309.0" mnemonicParsing="false" onAction="#OCancel" prefHeight="90.0" prefWidth="177.0" style="-fx-border-color: #2D75E8; -fx-border-radius: 15; -fx-border-width: 2px;" stylesheets="@../Design/style.css" text="Cancel" textFill="#ff1f1f">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_Ready" layoutX="802.0" layoutY="408.0" mnemonicParsing="false" onAction="#OReady" prefHeight="90.0" prefWidth="177.0" style="-fx-border-color: #2D75E8; -fx-border-radius: 15; -fx-border-width: 2px;" stylesheets="@../Design/style.css" text="Ready" textFill="#1cf240">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

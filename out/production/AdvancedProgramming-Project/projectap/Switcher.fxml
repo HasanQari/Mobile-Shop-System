@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectap.SwitcherController">
+   <children>
+      <Pane layoutX="20.0" layoutY="20.0" prefHeight="168.0" prefWidth="787.0" style="-fx-background-color: #2D75E8;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="106.0" layoutY="58.0" text=" Mobile Shop System" textFill="WHITE">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="140.0" layoutY="111.0" text="Switcher" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="70.0" fitWidth="64.0" layoutX="43.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/mobileIcon.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="newBTN" layoutX="269.0" layoutY="119.0" mnemonicParsing="false" onAction="#qaz" text="Button" />
+         </children>
+      </Pane>
+      <GridPane alignment="CENTER" hgap="10.0" layoutX="120.0" layoutY="200.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="200.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="btn_SSide" contentDisplay="TOP" mnemonicParsing="false" onAction="#SellerSide" prefHeight="153.0" prefWidth="195.0" stylesheets="@../Design/ButtonStyle.css" text="Seller Side">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="70.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/sside.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btn_CSide" contentDisplay="TOP" mnemonicParsing="false" onAction="#CustomerSide" prefHeight="145.0" prefWidth="279.0" stylesheets="@../Design/ButtonStyle.css" text="Customer Side" GridPane.columnIndex="1">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="70.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/cside.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
