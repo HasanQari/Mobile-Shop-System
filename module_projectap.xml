@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_projectap" default="compile.module.projectap">
+  <dirname property="module.projectap.basedir" file="${ant.file.module_projectap}"/>
+  
+  <property name="module.jdk.home.projectap" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.projectap" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.projectap" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.projectap" value="-encoding UTF-8 -source 11 -target 11 ${compiler.args}"/>
+  
+  <property name="projectap.output.dir" value="${module.projectap.basedir}/out/production/ProjectAP"/>
+  <property name="projectap.testoutput.dir" value="${module.projectap.basedir}/out/test/ProjectAP"/>
+  
+  <path id="projectap.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="projectap.module.production.classpath">
+    <path refid="${module.jdk.classpath.projectap}"/>
+  </path>
+  
+  <path id="projectap.runtime.production.module.classpath">
+    <pathelement location="${projectap.output.dir}"/>
+  </path>
+  
+  <path id="projectap.module.classpath">
+    <path refid="${module.jdk.classpath.projectap}"/>
+    <pathelement location="${projectap.output.dir}"/>
+  </path>
+  
+  <path id="projectap.runtime.module.classpath">
+    <pathelement location="${projectap.testoutput.dir}"/>
+    <pathelement location="${projectap.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.projectap">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.projectap">
+    <patternset refid="excluded.from.module.projectap"/>
+  </patternset>
+  
+  <path id="projectap.module.sourcepath">
+    <dirset dir="${module.projectap.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.projectap" depends="compile.module.projectap.production,compile.module.projectap.tests" description="Compile module ProjectAP"/>
+  
+  <target name="compile.module.projectap.production" depends="register.custom.compilers" description="Compile module ProjectAP; production classes">
+    <mkdir dir="${projectap.output.dir}"/>
+    <javac2 destdir="${projectap.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.projectap}/javac">
+      <compilerarg line="${compiler.args.projectap}"/>
+      <bootclasspath refid="projectap.module.bootclasspath"/>
+      <classpath refid="projectap.module.production.classpath"/>
+      <src refid="projectap.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.projectap"/>
+    </javac2>
+    
+    <copy todir="${projectap.output.dir}">
+      <fileset dir="${module.projectap.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.projectap.tests" depends="register.custom.compilers,compile.module.projectap.production" description="compile module ProjectAP; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.projectap" description="cleanup module">
+    <delete dir="${projectap.output.dir}"/>
+    <delete dir="${projectap.testoutput.dir}"/>
+  </target>
+</project>

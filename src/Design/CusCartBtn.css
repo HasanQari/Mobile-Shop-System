@@ -1,0 +1,20 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 15, 2019, 2:33:09 PM
+    Author     : HsQ Galaxy Book
+*/
+
+.button{
+    -fx-background-color: #2D75E8;
+
+}
+.button:hover{
+    -fx-background-color: #C0D5F7;
+}
+.button:pressed{
+    -fx-background-color: #73A3EF;
+}

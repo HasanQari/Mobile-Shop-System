@@ -1,0 +1,38 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 12, 2019, 9:24:12 PM
+    Author     : HsQ Galaxy Book
+*/
+
+#orderTable{
+    -fx-font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    -fx-border-collapse: collapse;
+    -fx-width: 100%;
+    -fx-border-color:#2D75E8;
+    -fx-border-width:2px;
+    -fx-border-radius:10;
+
+}
+
+#orderTable td,#orderTable th {
+    -fx-border: 1px solid #ddd;
+    -fx-padding: 8px;
+}
+
+#orderTable tr:nth-child(even){-fx-background-color: #f2f2f2;}
+
+#orderTable tr:hover {-fx-background-color: #ddd;}
+
+#th {
+    -fx-padding-top: 12px;
+    -fx-padding-bottom: 12px;
+    -fx-text-align: center;
+    -fx-background-color: #2D75E8;
+    -fx-color: white;
+    -fx-border: 1px solid #ddd;
+    -fx-padding: 8px;
+}

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectap.Report_P_infoController">
+   <children>
+      <Pane layoutX="10.0" layoutY="10.0" prefHeight="191.0" prefWidth="935.0" style="-fx-background-color: #2D75E8;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="230.0" layoutY="60.0" text=" Mobile Shop System" textFill="WHITE">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+            <Label layoutX="268.0" layoutY="131.0" text="Reports and Product List info." textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="70.0" fitWidth="64.0" layoutX="163.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/mobileIcon.png" />
+               </image>
+            </ImageView>
+            <Hyperlink fx:id="btn_sHome" layoutX="14.0" layoutY="141.0" onAction="#sHome" style="-fx-underline: none; -fx-border-color: white; -fx-border-radius: 25;" text="Home" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Hyperlink>
+         </children>
+      </Pane>
+      <Pane layoutX="100.0" layoutY="291.0" prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: #fff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="190.0">
+         <children>
+            <ListView fx:id="lv_ProductList" fixedCellSize="0.0" layoutX="471.0" layoutY="61.0" prefHeight="429.0" prefWidth="507.0" style="-fx-border-color: #2D75E8; -fx-border-radius: 10; -fx-border-width: 3px;" />
+            <Label layoutX="469.0" layoutY="24.0" prefHeight="45.0" prefWidth="170.0" text="Product List:">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="47.0" layoutY="61.0" prefHeight="45.0" prefWidth="170.0" text="Total Profit :">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_Tprofit" alignment="CENTER" contentDisplay="CENTER" layoutX="290.0" layoutY="61.0" prefHeight="49.0" prefWidth="156.0" style="-fx-border-color: #2D75E8; -fx-background-color: #f9f9f9; -fx-border-width: 2px; -fx-border-radius: 15;" textFill="#26d04b">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="47.0" layoutY="120.0" prefHeight="45.0" prefWidth="239.0" text="Total Items :">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_Titem" alignment="CENTER" contentDisplay="CENTER" layoutX="290.0" layoutY="120.0" prefHeight="49.0" prefWidth="156.0" style="-fx-border-color: #2D75E8; -fx-background-color: #f9f9f9; -fx-border-width: 2px; -fx-border-radius: 15;" textFill="#26d04b">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="47.0" layoutY="178.0" prefHeight="45.0" prefWidth="239.0" text="Total Sold Out Items :">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_TnewItem" alignment="CENTER" contentDisplay="CENTER" layoutX="290.0" layoutY="178.0" prefHeight="49.0" prefWidth="156.0" style="-fx-border-color: #2D75E8; -fx-background-color: #f9f9f9; -fx-border-width: 2px; -fx-border-radius: 15;" textFill="#26d04b">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="48.0" layoutY="254.0" prefHeight="45.0" prefWidth="239.0" text="Top Selling :">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <ListView fx:id="lv_TopSelling" fixedCellSize="0.0" layoutX="46.0" layoutY="299.0" prefHeight="191.0" prefWidth="402.0" style="-fx-border-color: #2D75E8; -fx-border-radius: 10; -fx-border-width: 3px;" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
